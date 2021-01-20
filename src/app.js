@@ -38,6 +38,9 @@ app.get("/repositories", (request, response) => {
   return response.status(200).json(repositories);
 });
 
+app.get("/", (request, response) => {
+  return response.status(200).json({ message: "Wellcome to Repositories API" });
+});
 app.post("/repositories", (request, response) => {
   const { title, url, techs } = request.body;
 
